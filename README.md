@@ -6,89 +6,15 @@
 - 学号：181250183
 
 ## 1 目录结构
-│  README.md 
-
+│  README.md  
 │  struct.png
-
 ├─Data
-
-│  │
-
-│  ├─cifar-10-batches-py
-
-│  ├─cifar-100-python
-
-│  ├─cifar100_result_data
-
-│  ├─cifar10_result_data
-
-│  └─operation_data_png_cifar100
-
-│      ├─feature
-
-│      ├─oringin
-
-│      ├─rotate
-
-│      ├─sample
-
-│      ├─shift
-
-│      └─zca
-
 ├─Demo
-
 ├─model
-
-│  ├─cifar10
-
-│  ├─cifar100
-
-│  ├─my_model_cifar10
-
-│  │  ├─composite
-
-│  │  ├─oringin
-
-│  │  └─zca
-│  └─my_model_cifar100
-
-│      ├─composite
-
-│      ├─oringin
-
-│      └─zca
-
-│
 ├─Project
-
-│  │  cifar10.html
-
-│  │  cifar100.html
-
-│  │  demo.py
-
-│  │  eval.py
-
-│  │  load.py
-
-│  │  methods.py
-
-│  │  social_network.py
-
-│  │  train_model.py
-
-│  │  visialize.py
-
-│  │
-
-│  └─__pycache__
-
 └─Report
-
-​        Report.pdf
-
-​        Report.md
+        Report.pdf
+        Report.md
 
 
 
@@ -101,6 +27,7 @@
   - methods.py 是不同的图像处理方法
   - visialize.py 可视化的相关代码
   - train_model.py 训练代码
+- model：模型集合
 
 ## 2 第三方库
 tensorflow:2.3.1
