@@ -19,8 +19,6 @@ def rotate(images, labels, length):
     print('rotate:')
     datagen_flip = ImageDataGenerator(
         rotation_range=90,
-        #horizontal_flip=True,
-        #vertical_flip=True,
         fill_mode='nearest'
     )
     #iter = datagen_flip.flow(x=images, y=labels, batch_size=10, shuffle=False, save_to_dir='../Data/operation_data_png_cifar100/rotate')
@@ -38,7 +36,7 @@ def shift(images, labels, length):
     print('shift:')
     datagen_flip = ImageDataGenerator(
         width_shift_range=0.2,
-        #height_shift_range=0.2,
+        height_shift_range=0.2,
         fill_mode='nearest'
     )
     #iter = datagen_flip.flow(x=images, y=labels, batch_size=10, shuffle=False,save_to_dir='../Data/operation_data_png_cifar100/shift')
@@ -104,16 +102,20 @@ def feature(images, labels, length):
     return x_res, y_res
 
 
-'''
-def sample(images, labels, length):
-    print('sample:')
+
+def composite(images, labels, length):
+    print('composite:')
     datagen_sample = ImageDataGenerator(
-        samplewise_center=True,
-        samplewise_std_normalization=True
+        rotation_range=90,
+        fill_mode='nearest',
+        width_shift_range=0.2,
+        height_shift_range=0.2,
+        horizontal_flip=True,
+        vertical_flip=True,
     )
     datagen_sample.fit(images)
-    #iter = datagen_sample.flow(x=images, y=labels, batch_size=10, shuffle=False,save_to_dir='../Data/operation_data_png_cifar100/sample')
-    #Xtmp, Ytmp = iter.next()
+    iter = datagen_sample.flow(x=images, y=labels, batch_size=10, shuffle=False,save_to_dir='../Data/operation_data_png_cifar100/sample')
+    Xtmp, Ytmp = iter.next()
     iter = datagen_sample.flow(x=images, y=labels, batch_size=length,shuffle=False)
     i = 0
     while i<10:
@@ -121,4 +123,4 @@ def sample(images, labels, length):
         i += 1
     print(x_res.shape)
     return x_res, y_res
-'''
+
