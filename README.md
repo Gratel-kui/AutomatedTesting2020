@@ -6,10 +6,10 @@
 - 学号：181250183
 
 ## 1 目录结构
-│  README.md
-│  struct.png
-├─Data
-│  │
+│  README.md  \n
+│  struct.png\n
+├─Data\n
+│  │\n
 │  ├─cifar-10-batches-py
 │  ├─cifar-100-python
 │  ├─cifar100_result_data
@@ -64,8 +64,11 @@
 
 ## 2 第三方库
 tensorflow:2.3.1
+
 keras:2.4.3
+
 numpy:1.18.5
+
 python:3.7.0
 
 
